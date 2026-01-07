@@ -1,15 +1,20 @@
-# hotel_backend/urls.py
-
 from django.contrib import admin
 from django.urls import path, include
-from django.http import HttpResponse
+from rest_framework import routers
+from rooms.views import RoomViewSet
+from bookings.views import BookingViewSet
+from bookings.auth_views import register_user, login_user, logout_user, check_auth_status
 
-def home(request):
-    return HttpResponse("<h1>Welcome to Aurora Grand Hotel API</h1><p>Go to the frontend at <a href='http://localhost:8080'>http://localhost:8080</a></p>")
+# Create ONE router for all ViewSets
+router = routers.DefaultRouter()
+router.register(r'rooms', RoomViewSet, basename='room')
+router.register(r'bookings', BookingViewSet, basename='booking')
 
 urlpatterns = [
-    path('', home, name='home'),  # ← Add this line
     path('admin/', admin.site.urls),
-    path('api/', include('bookings.urls')),  # your API
-    path('api/', include('rooms.urls')),   # if you have a separate rooms app
+    path('api/', include(router.urls)),  # All API endpoints
+    path('api/auth/register/', register_user, name='register'),
+    path('api/auth/login/', login_user, name='login'),
+    path('api/auth/logout/', logout_user, name='logout'),
+    path('api/auth/status/', check_auth_status, name='auth-status'),
 ]

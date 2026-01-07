@@ -1,15 +1,10 @@
-﻿from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import BookingViewSet
+from django.urls import path
 from .auth_views import register_user, login_user, logout_user, check_auth_status
 
-router = DefaultRouter()
-router.register(r'bookings', BookingViewSet, basename='booking')
-
+# No router here - just auth views
 urlpatterns = [
-    path('auth/register/', register_user, name='register'),
-    path('auth/login/', login_user, name='login'),
-    path('auth/logout/', logout_user, name='logout'),
-    path('auth/status/', check_auth_status, name='auth-status'),  # Debug endpoint
-    path('', include(router.urls)),
+    path('register/', register_user, name='register'),
+    path('login/', login_user, name='login'),
+    path('logout/', logout_user, name='logout'),
+    path('status/', check_auth_status, name='auth-status'),
 ]
