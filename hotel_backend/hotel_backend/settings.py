@@ -176,6 +176,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "https://aurora-grand-frontend.vercel.app",
+    "https://aurora-grand-hotel-frontend.vercel.app",
     "https://aurora-grand-hotel-frontend-q09sunhbz.vercel.app",
     "https://aurora-grand-hotel-front-git-090987-lemmanuel659-2201s-projects.vercel.app",
     "https://aurora-grand-hotel-frontend-6bvtfs5ai.vercel.app",
@@ -218,6 +219,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5173",
     "https://aurora-grand-hotel-frontend-q09sunhbz.vercel.app",
     "https://aurora-grand-frontend.vercel.app",
+    "https://aurora-grand-hotel-frontend.vercel.app",
     "https://aurora-grand-hotel-front-git-090987-lemmanuel659-2201s-projects.vercel.app",
     "https://aurora-grand-hotel-frontend-6bvtfs5ai.vercel.app",
 ]
