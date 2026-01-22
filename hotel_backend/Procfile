@@ -1,1 +1,1 @@
-﻿web: gunicorn hotel_backend.wsgi:application --bind 0.0.0.0:$PORT --log-file -
+﻿web: python manage.py migrate && gunicorn hotel_backend.wsgi:application --bind 0.0.0.0:$PORT --log-file -
