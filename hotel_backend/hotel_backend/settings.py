@@ -82,8 +82,8 @@ WSGI_APPLICATION = 'hotel_backend.wsgi.application'
 # Database
 # ==============================
 
-if os.environ.get('RAILWAY_ENVIRONMENT'):
-    # Production: Use PostgreSQL from Railway
+if 'DATABASE_URL' in os.environ:
+    # Production: Use PostgreSQL from Environment (Railway/Render/etc)
     DATABASES = {
         'default': dj_database_url.config(
             default=os.environ.get('DATABASE_URL'),
