@@ -175,12 +175,10 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "http://localhost:8080",
-    "http://127.0.0.1:8080",
-    "http://localhost:8081",
-    "http://127.0.0.1:8081",
     "https://aurora-grand-frontend.vercel.app",
     "https://aurora-grand-hotel-frontend-q09sunhbz.vercel.app",
+    "https://aurora-grand-hotel-front-git-090987-lemmanuel659-2201s-projects.vercel.app",
+    "https://aurora-grand-hotel-frontend-6bvtfs5ai.vercel.app",
 ]
 
 CORS_ALLOW_HEADERS = [
@@ -201,16 +199,16 @@ CORS_ALLOW_HEADERS = [
 # ==============================
 
 # Session settings for authentication
-SESSION_COOKIE_SAMESITE = None      # Allows cross-origin
-SESSION_COOKIE_SECURE = False       # False for HTTP (dev), True for HTTPS (prod)
+SESSION_COOKIE_SAMESITE = 'None'    # Allows cross-origin
+SESSION_COOKIE_SECURE = True        # True for HTTPS (prod)
 SESSION_COOKIE_HTTPONLY = False     # False so JS can check if needed
 SESSION_COOKIE_DOMAIN = None        # Let Django handle it automatically
 SESSION_COOKIE_AGE = 1209600        # 2 weeks in seconds
 SESSION_COOKIE_NAME = 'sessionid'   # Default Django session cookie name
 
 # CSRF settings
-CSRF_COOKIE_SAMESITE = None
-CSRF_COOKIE_SECURE = False
+CSRF_COOKIE_SAMESITE = 'None'
+CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = False
 
 CSRF_TRUSTED_ORIGINS = [
@@ -218,9 +216,8 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "http://localhost:8080",
-    "http://127.0.0.1:8080",
-    "http://localhost:8081",
-    "http://127.0.0.1:8081",
     "https://aurora-grand-hotel-frontend-q09sunhbz.vercel.app",
+    "https://aurora-grand-frontend.vercel.app",
+    "https://aurora-grand-hotel-front-git-090987-lemmanuel659-2201s-projects.vercel.app",
+    "https://aurora-grand-hotel-frontend-6bvtfs5ai.vercel.app",
 ]
