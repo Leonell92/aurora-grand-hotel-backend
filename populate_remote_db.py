@@ -9,20 +9,31 @@ rooms = [
         "name": "Executive Room",
         "room_type": "double",
         "description": "Modern room with premium amenities and city view",
-        "price_per_night": "199.99",
+        "price_per_night": "250000.00",
         "max_guests": 2,
         "image_url": "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800",
         "amenities": ["WiFi", "TV", "Work Desk", "City View"],
         "available": True
     },
+
     {
         "name": "Standard Room",
         "room_type": "single",
         "description": "Cozy room perfect for solo travelers",
-        "price_per_night": "129.99",
+        "price_per_night": "100000.00",
         "max_guests": 2,
         "image_url": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800",
         "amenities": ["WiFi", "TV"],
+        "available": True
+    },
+    {
+        "name": "Deluxe Room",
+        "room_type": "suite",
+        "description": "Spacious suite with ocean view, king-size bed, and private balcony",
+        "price_per_night": "400000.00",
+        "max_guests": 4,
+        "image_url": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800",
+        "amenities": ["WiFi", "TV", "Mini Bar", "Ocean View", "Balcony"],
         "available": True
     }
 ]

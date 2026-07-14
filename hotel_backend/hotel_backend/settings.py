@@ -223,3 +223,13 @@ CSRF_TRUSTED_ORIGINS = [
     "https://aurora-grand-hotel-front-git-090987-lemmanuel659-2201s-projects.vercel.app",
     "https://aurora-grand-hotel-frontend-6bvtfs5ai.vercel.app",
 ]
+
+
+# ==============================
+# EMAIL SETTINGS
+# ==============================
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
+DEFAULT_FROM_EMAIL = 'webmaster@localhost'
